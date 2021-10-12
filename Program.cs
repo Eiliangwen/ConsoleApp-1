@@ -8,8 +8,50 @@ namespace ConsoleApp_1
         {
             //Console.WriteLine("Hello World!");
             OperatorExamples();
+            TryAnIf();
+            TrySomeLoops();
+            TryAnIfElse();
             //string z;
             //string message = "the answer is" + z;
+        }
+
+        private static void TrySomeLoops()
+        {
+            int count = 0;
+            while(count<10)
+            {
+                count = count + 1;
+
+            }
+            for(int i=0;i<5;i++)
+            {
+                count = count - 1;
+
+            }
+            Console.WriteLine("the answer is " + count);
+        }
+
+        private static void TryAnIf()
+        {
+            int someValue = 4;
+            string name = "bobbo jr.";
+            if ((someValue==3)&&(name =="joe"))
+            {
+                Console.WriteLine("x is 3 and the name is joe");
+            }
+            Console.WriteLine("this line runs no matter what");
+        }
+        private static void TryAnIfElse()
+        {
+            int x = 5;
+            if(x==10)
+            {
+                Console.WriteLine("x must be 10");
+            }
+            else
+            {
+                Console.WriteLine("x isnt 10";
+            }
         }
 
         private static void OperatorExamples()
@@ -24,12 +66,17 @@ namespace ConsoleApp_1
             int area = width * height;
             Console.WriteLine(area); //24
 
-
-            while (area<50)
+            while (area<20)
             {
                 height++;
                 area = width * height;
             }
+
+            do
+            {
+                width--;
+                area = width * height;
+            } while (area>25);
             // The next two statements declare string variables
             // and use + to concatenate them (join them together)
             string result = "The area";
